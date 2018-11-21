@@ -9,12 +9,36 @@ function setCart(c) {
   return cart;
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max))
+}
+
 function addToCart(item) {
- // write your code here
+  cart.push({"itemName": item, "itemPrice": getRandomInt(100)});
+  return `${item} has been added to your cart.`;
 }
 
 function viewCart() {
-  // write your code here
+  switch(cart.length) {
+    case 0:
+      return "Your shopping cart is empty.";
+      break;
+    case 1:
+      let returnString = 'In your cart, you have ';
+      for (let i = 0; i < cart.length; i++) {
+        returnString += `${cart[i].itemName} at ${cart[i].itemPrice}.`;
+      }
+      return returnString;
+      break;
+    case (>1):
+      let returnString = 'In your cart, you have ';
+      for (let i = 0; i < cart.length -1; i++) {
+        returnString += `${cart[i].itemName} at ${cart[i].itemPrice}, and`;
+      }
+      returnString += `${cart[i].itemName} at ${cart[i].itemPrice}.`
+      return returnString;
+      break;
+  }
 }
 
 function total() {
