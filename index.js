@@ -40,7 +40,7 @@ function viewCart() {
 }
 function total() {
   let price = 0;
-  for (let i = cart.length; i > 0; i--)  {
+  for (let i = cart.length -1; i > 0; i--)  {
     price += cart[i].itemPrice
   }
   return price
