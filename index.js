@@ -10,7 +10,7 @@ function setCart(c) {
 }
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max))
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
 function addToCart(item) {
@@ -19,19 +19,18 @@ function addToCart(item) {
 }
 
 function viewCart() {
+  let returnString = 'In your cart, you have ';
   switch(cart.length) {
     case 0:
       return "Your shopping cart is empty.";
       break;
     case 1:
-      let returnString = 'In your cart, you have ';
       for (let i = 0; i < cart.length; i++) {
         returnString += `${cart[i].itemName} at ${cart[i].itemPrice}.`;
       }
       return returnString;
       break;
     case 2:
-      let returnString = 'In your cart, you have ';
       for (let i = 0; i < cart.length -1; i++) {
         returnString += `${cart[i].itemName} at ${cart[i].itemPrice} and`;
       }
@@ -39,7 +38,6 @@ function viewCart() {
       return returnString;
       break;
     default:
-      let returnString = 'In your cart, you have ';
       for (let i = 0; i < cart.length -1; i++) {
         returnString += `${cart[i].itemName} at ${cart[i].itemPrice} and,`;
       }
