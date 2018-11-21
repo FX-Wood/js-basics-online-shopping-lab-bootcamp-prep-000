@@ -55,7 +55,7 @@ function removeFromCart(item) {
     } else inCart = false;
   }
   if (inCart == false)  {
-    return "That item is not in your cart";
+    return "That item is not in your cart.";
   }
 }
 
