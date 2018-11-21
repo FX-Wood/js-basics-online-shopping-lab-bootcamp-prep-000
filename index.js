@@ -30,17 +30,23 @@ function viewCart() {
       }
       return returnString;
       break;
-    case (>1):
+    case (2):
       let returnString = 'In your cart, you have ';
       for (let i = 0; i < cart.length -1; i++) {
-        returnString += `${cart[i].itemName} at ${cart[i].itemPrice}, and`;
+        returnString += `${cart[i].itemName} at ${cart[i].itemPrice} and`;
       }
       returnString += `${cart[i].itemName} at ${cart[i].itemPrice}.`
       return returnString;
       break;
+    default:
+    let returnString = 'In your cart, you have ';
+    for (let i = 0; i < cart.length -1; i++) {
+      returnString += `${cart[i].itemName} at ${cart[i].itemPrice} and,`;
+    }
+    returnString += `${cart[i].itemName} at ${cart[i].itemPrice}.`
+    return returnString;
   }
 }
-
 function total() {
   // write your code here
 }
